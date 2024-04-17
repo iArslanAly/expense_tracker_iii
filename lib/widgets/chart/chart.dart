@@ -37,7 +37,8 @@ class Chart extends StatelessWidget {
             return ChartBar(
               bucket.category,
               bucket.totalExpenses,
-              maxTotalExpense == 0 ? 0 : bucket.totalExpenses / maxTotalExpense,
+              bucket.totalExpenses / maxTotalExpense,
+              fill: 0.0, // Add the missing argument here
             );
           }).toList(),
         ),
